@@ -3,7 +3,7 @@
 * baidu.py
 * hezi.py
 
-##install
+## install
 
 python3 -m pip install -r requirments.txt
 
