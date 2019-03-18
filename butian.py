@@ -32,10 +32,10 @@ class butian(object):
         self.header = {
             #输入你的cookie
             "Cookie":"",
-            "Host": "loudong.360.cn",
-            "Referer": "http://loudong.360.cn/Service",
+            "Host": "butian.360.cn",
+            "Referer": "https://butian.360.cn/Reward/plan",
             "User-Agent": USER_AGENTS[random.randint(0, 2)],
-            "Origin": "http://loudong.360.cn",
+            "Origin": "https://butian.360.cn",
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
             "X-Requested-With": "XMLHttpRequest",
@@ -48,7 +48,7 @@ class butian(object):
         return self.header
 
     def butianjson(self):
-        self.res = requests.post("http://loudong.360.cn/Reward/pub", headers=self.bananer(), data=self.data)
+        self.res = requests.post("https://butian.360.cn/Reward/pub", headers=self.bananer(), data=self.data)
         print(self.res.content)
         self.content = json.loads(self.res.content)
         result = []
