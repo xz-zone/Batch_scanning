@@ -56,6 +56,7 @@ class butian(object):
             for i in range(0, len(self.content["data"]["info"]) - 1):
                 url = self.content['data']['info'][i]['bus_url'].split("/")[0] + "//" + self.content['data']['info'][i]['bus_url'].split("/")[2]
                 self.save_txt(url)
+                print("FILE OK! %s" % url)
         else:
             exit()
 
