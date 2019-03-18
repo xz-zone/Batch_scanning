@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 class butian(object):
     def __init__(self, page):
         self.page = page
-        self.butian_url = "http://loudong.360.cn/Reward/pub"
+        self.butian_url = "https://butian.360.cn/Reward/pub"
         self.data = {
             "s": 1,
             "p": self.page,
@@ -48,7 +48,7 @@ class butian(object):
         return self.header
 
     def butianjson(self):
-        self.res = requests.post("https://butian.360.cn/Reward/pub", headers=self.bananer(), data=self.data)
+        self.res = requests.post(self.butian_url, headers=self.bananer(), data=self.data)
         print(self.res.content)
         self.content = json.loads(self.res.content)
         result = []
